@@ -1,0 +1,98 @@
+/* HEADER & BANNER */
+.app {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1.2rem;
+  gap: 2rem;
+}
+@media screen and (max-width: 992px) {
+  .app {
+    flex-direction: column;
+  }
+}
+.app__left {
+  flex: 0.65;
+}
+.app__right {
+  flex: 0.35;
+}
+.app__right > * {
+  margin-bottom: 2rem;
+}
+.app__rightCases {
+  margin-bottom: 1rem;
+}
+.app__header {
+  display: flex;
+  align-items: center !important;
+  text-align: center;
+  margin-top: 0.5rem;
+  justify-content: space-between;
+  height: fit-content;
+}
+
+.app__banner {
+  position: relative;
+  overflow: hidden !important;
+  height: 15rem;
+  width: 100%;
+}
+
+.app__imageContainer {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(./corona.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 15rem;
+  overflow: hidden;
+  animation: glow 60s infinite;
+}
+@keyframes glow {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.app__info {
+  position: absolute;
+  top: 5rem;
+  left: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+.app__info > h2 {
+  color: var(--grey-50);
+  z-index: 1;
+}
+.app__info > h3 {
+  color: var(--primary-100);
+  z-index: 1;
+}
+@media screen and (max-width: 900px) {
+  .app__info {
+    align-items: center;
+    margin-top: -2rem;
+    text-align: center;
+    left: 0;
+  }
+}
+
+/* STATS */
+
+.app__stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+@media screen and (max-width: 576px) {
+  .app__stats {
+    grid-template-columns: 1fr;
+  }
+}

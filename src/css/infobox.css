@@ -1,0 +1,33 @@
+.infoBox {
+  cursor: pointer;
+}
+.infoBox:hover {
+  box-shadow: var(--shadow-1);
+  transition: var(--transtion);
+}
+.infoBox__today {
+  text-transform: lowercase;
+  color: var(--red-dark);
+}
+.infoBox__total {
+  text-transform: capitalize;
+  color: var(--red-dark);
+}
+.infoBox--selected {
+  border-top: 10px solid #66b366;
+  color: #66b366 !important;
+}
+.infoBox--dark {
+  border-top: 10px solid #ff4d4d;
+  color: #ff4d4d !important;
+}
+.infoBox--red {
+  border-top: 10px solid #b30000;
+  color: #b30000 !important;
+}
+
+@media screen and (max-width: 576px) {
+  .infoBox {
+    text-align: center;
+  }
+}
