@@ -13,6 +13,9 @@
 .app__left {
   flex: 0.65;
 }
+.app__dropdown {
+  background-color: var(--white);
+}
 .app__right {
   flex: 0.35;
 }
